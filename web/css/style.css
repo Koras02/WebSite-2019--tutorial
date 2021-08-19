@@ -18,11 +18,11 @@
 /* 백크라운드 position + repeat 작업 */
 #header {   height: 325px; background: url("../img/header_bg.jpg") center top repeat-x;}
 #contents {  }
-#footer {  height: 200px; background:#333;}
+#footer { border-top:1px solid #222;}
 
 
 /* 컨텐츠 레이아웃 */
-#cont_nav{ background-color: #f6fdff; }
+#cont_nav{ background-color: #f6fdff; display:none; }
 #cont_tit{ background-color: #EAF7FD;}
 #cont_ban{ background-color: #dceff6;}
 #cont_cont{ background:#f6fdff;}
@@ -124,6 +124,9 @@
    width:60px;
    height:60px;
    background: url('../img/icon.png') no-repeat 0 -600px;
+}
+.tit .btn.on {
+  background-position: 0 -660px;
 }
 
 /* 배너 스타일 작성 */
@@ -358,3 +361,18 @@ background:url('../img/icon.png') -150px -90px; width: 17px;height: 17px;}
 .popup li {float:left;width: 93px;margin-right: 5px;}
 .popup li.last {margin-right: 0;}
 .popup li img {width: 100%;}
+
+
+/* footer */
+
+
+.footer { padding: 25px 0; text-align:center;}
+.footer ul { margin-bottom: 25px;}
+.footer li {position:relative;display:inline; padding: 0 7px 0 10px;}
+.footer li::before { content: ''; width: 1px; height: 12px; background:#ccc; position:absolute;
+ left:0; top: 2px;
+}
+
+/* 첫번째 안나타나게 */
+.footer li:first-child::before { width: 0; height: 0;}
+.footer .w3c { margin-top: 15px;}
