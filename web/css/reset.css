@@ -41,6 +41,9 @@ body, input, textarea, select, button, table {
  } 
 
 
+ /* 블릿기호 초기화 == 숫자순서 제거 */
+dl,ul,li,ol,menu { list-style:none; }
+
  /* 스크린 아웃시 */
  /* 대체텍스트 가 아닌 접근성을 위한 숨김 텍스트를 작성할때 */
  .ir_su {
