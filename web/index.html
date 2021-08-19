@@ -396,14 +396,14 @@
                                             </ul>
                                       </li>
                                       <li><a href="#">공지사항2</a>
-                                             <ul style="display:none;">
+                                             <ul>
                                                 <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                                 <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                                 <li><a href="#">두 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                             </ul>
                                       </li>
                                       <li><a href="#">공지사항3</a>
-                                             <ul style="display:none;">
+                                             <ul>
                                                 <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                                 <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
                                                 <li><a href="#">세 번째 공지사항 탭 메뉴 테스트 목록입니다.</a></li>
@@ -498,6 +498,30 @@
          <script src="js/slick.min.js"></script>
 
          <script type="text/javascript">
+            //탭메뉴
+             var $tab_list = $(".tab_menu");
+             
+            //  ul ul을 찾아서 숨김
+             $tab_list.find("ul ul").hide();
+
+            //  첫번째 active 에게 는 보여줌
+             $tab_list.find("li.active > ul").show();
+
+             function tabMenu(e) {
+                 e.preventDefault();
+                 var $this = $(this);
+
+                 // 다음 을 클릭시 ul 보이기
+                 // 보여주고서 부모에 li 한테 add 하고 형제class active
+                 $this.next("ul").show().parent("li").addClass("active").siblings("li")
+                 .removeClass("active").find(">ul").hide();
+
+             }
+
+            //  a 클릭시 tabmenu 작동
+             $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+
+
              // 배너
              // 마크업 html 세팅 -> css 연동  ->  jquery 연동 --> slick제이쿼리 호출
             $('.ban').slick({
