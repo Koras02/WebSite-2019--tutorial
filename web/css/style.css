@@ -2,9 +2,21 @@
 @charset "utf-8";
 
 
+/* 스킵 네비게이션 */
+#skip {position:relative;}
+/* abosulte 내맘대로 이동 사람짐 단점 */
+#skip a { position: absolute; left:0; top:-35px; border: 1px solid #fff; color: #ffffff;
+ background: #333; line-height: 30px; width:140px; text-align:center;}
+
+ /*  탭눌를때 활성화 하게 */
+#skip a:active,
+#skip a:focus {top: 0;}
+
+
 /* 레이아웃 */
 #wrap { width: 100%; }
-#header { width: 100%; height: 325px; background: #111;}
+/* 백크라운드 position + repeat 작업 */
+#header { width: 100%; height: 325px; background: url("../img/header_bg.jpg") center top repeat-x;}
 #contents { width: 100%; height: 800px; background: #222;}
 #footer { width: 100%; height: 200px; background:#333;}
 
@@ -21,3 +33,46 @@
 
 
 
+/* 헤더 */
+/* 해더 태그 inline & block 구조로 나뉨 */
+.header { }
+.header .header-menu{ text-align: right;}
+/* inline-block으로 하면 padding이 먹힘 float으로하면 오른쪽 정렬이 되지만 순서가 뒤바뀜 */
+.header  .header-menu a {  color:#fff; padding:10px 0px 10px 13px; display:inline-block; }
+.header  .header-menu a:hover { color: #fcc;}
+.header .header-tit {text-align: center;}
+.header .header-tit h1 {
+    background-color: #4aa8da; 
+    font-size:28px;
+    padding:5px 20px 6px 20px; 
+    display:inline-block;
+    margin-top:40px; 
+    color:#fff; 
+    font-weight:normal;
+    text-transform: uppercase;
+}
+
+/* 블록구조는 한영역 차지  */
+.header .header-tit a {
+    display:inline-block;
+    background-color:#2698cb;
+    font-size: 18px;
+    color:#fff;
+    padding: 5px 20px 6px 20px;
+    margin-top: -5px;
+}
+
+.header .header-icon { text-align: center; margin-top:30px;}
+.header .header-icon a{ width: 60px;height: 60px; display:inline-block ;background: url("../img/icon.png"); margin:0 3px;}
+
+/* 아이콘영역 설정 */
+.header .header-icon a.icon1 {background-position: 0 0; }
+.header .header-icon a.icon2 {background-position: 0 -60px;}
+.header .header-icon a.icon3 {background-position: 0 -120px;}
+.header .header-icon a.icon4 {background-position: 0 -180px;}
+
+/* 마우스오버 시 효과*/
+.header .header-icon a.icon1:hover {background-position: -60px 0; }
+.header .header-icon a.icon2:hover {background-position: -60px -60px;}
+.header .header-icon a.icon3:hover {background-position: -60px -120px;}
+.header .header-icon a.icon4:hover {background-position: -60px -180px;}
