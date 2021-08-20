@@ -130,8 +130,8 @@
 
 /* 슬릭 배너 */
 .ban {position: relative; padding: 24px 0 40px;}
-.ban .slick-prev {position: absolute; left: -70px; top: 80px; width: 43px; height: 43px; background: url(img/icon.png) -150px 0; text-indent: -9999px;}
-.ban .slick-next {position: absolute; right: -70px; top: 80px; width: 43px; height: 43px; background: url(img/icon.png) -150px -43px; text-indent: -9999px;}
+.ban .slick-prev {position: absolute; left: -70px; top: 80px; width: 43px; height: 43px; background: url('../img/icon.png') -150px 0; text-indent: -9999px; border:none;}
+.ban .slick-next {position: absolute; right: -70px; top: 80px; width: 43px; height: 43px; background:url('../img/icon.png') -150px -43px; text-indent: -9999px; border:none;}
 .ban .slick-prev:hover {background-position: -193px 0;}
 .ban .slick-next:hover {background-position: -193px -43px;}
 .ban img {border: 4px solid #dcdcdc; width: 100%; box-sizing: border-box;}
@@ -139,7 +139,7 @@
 .slick-slide {margin: 10px;}
 .slick-dots{position: absolute; bottom: 15px; display: block; width: 100%; text-align: center;}
 .slick-dots li{position: relative; display: inline-block; width: 15px; height: 15px; margin: 5px;}
-.slick-dots li button {font-size: 0; line-height: 0; display: block; width: 15px; height: 15px; cursor: pointer; background: #5dbfeb; border-radius: 50%;}
+.slick-dots li button {font-size: 0; line-height: 0; display: block; width: 15px; height: 15px; cursor: pointer; background: #5dbfeb; border-radius: 50%; border:none;}
 .slick-dots li.slick-active button {background: #2B91C8;}
  
 
@@ -264,37 +264,36 @@
 
 
 /*  갤러리  */
-.gallery { position:relative;border: 1px solid #ccc; height:255px; overflow: hidden; }
-.gallery h4 { font-size: 14px; color:#0093bd; border-bottom: 1px solid #ccc; padding: 10px 0 8px 11px; font-weight: bold;}
-.gallery .gallery_btn { position: absolute; right: 5px; top: 7px;}
-.gallery .gallery_btn ul { overflow:hidden;}
-.gallery .gallery_btn li { float:left;margin:1px 2px; }
-.gallery .gallery_btn li a { display:block; width: 23px; height: 23px; background:url(../img/icon.png) no-repeat; }
+.gallery {position: relative; border: 1px solid #ccc; height: 254px; overflow: hidden;}
+.gallery h4 {font-size: 14px; color: #0093bd; border-bottom: 1px solid #ccc; padding: 10px 0 8px 11px; font-weight: bold;}
+.gallery .gallery_btn {position: absolute; right: 5px; top: 7px;}
+.gallery .gallery_btn ul {overflow: hidden;}
+.gallery .gallery_btn li {float: left; margin: 1px 2px;}
+.gallery .gallery_btn li a {display: block; width: 23px; height: 23px; background: url(../img/icon@2.png) no-repeat;}
+.gallery .gallery_btn li.gb_icon1 a {background-position: -150px -120px}
+.gallery .gallery_btn li.gb_icon2 a {background-position: -150px -143px}
+.gallery .gallery_btn li.gb_icon3 a {background-position: -150px -166px}
+.gallery .gallery_btn li.gb_icon4 a {background-position: -150px -189px}
+.gallery .gallery_btn li.gb_icon1 a:hover {background-position: -173px -120px}
+.gallery .gallery_btn li.gb_icon2 a:hover {background-position: -173px -143px}
+.gallery .gallery_btn li.gb_icon3 a:hover {background-position: -173px -166px}
+.gallery .gallery_btn li.gb_icon4 a:hover {background-position: -173px -189px}
+.gallery .gallery_img img {width: 100%;}
 
-.gallery .gallery_btn li.gb_icon1 a { background-position: -150px -120px;}
-.gallery .gallery_btn li.gb_icon2 a { background-position: -150px -143px;} 
-.gallery .gallery_btn li.gb_icon3 a { background-position: -150px -166px;} 
-.gallery .gallery_btn li.gb_icon4 a { background-position: -150px -189px;} 
 
-.gallery .gallery_btn li.gb_icon1 a:hover { background-position: -173px -120px;}
-.gallery .gallery_btn li.gb_icon2 a:hover{ background-position: -173px -143px;} 
-.gallery .gallery_btn li.gb_icon3 a:hover { background-position: -173px -166px;} 
-.gallery .gallery_btn li.gb_icon4 a:hover { background-position: -173px -189px;} 
-.gallery .gallery_img img { width: 100%;}
 
 
 /* 슬릭갤러리 */
- 
-.gallery .gallery_btn button { float:left; margin: 1px 2px;  display:block; width: 23px; height: 23px; background:url(../img/icon.png) no-repeat;  }
-.gallery .gallery_btn .gb_icon1 { background-position: -150px -120px;}
-.gallery .gallery_btn .gb_icon2 { background-position: -150px -143px;}
-.gallery .gallery_btn .gb_icon3 { background-position: -150px -166px;}
-.gallery .gallery_btn .gb_icon4 { background-position: -150px -189px;}
-
-.gallery .gallery_btn .gb_icon1 a:hover { background-position: -173px -120px;}
-.gallery .gallery_btn .gb_icon2 a:hover{ background-position: -173px -143px;} 
-.gallery .gallery_btn .gb_icon3 a:hover { background-position: -173px -166px;} 
-.gallery .gallery_btn .gb_icon4 a:hover { background-position: -173px -189px;} 
+.gallery .gallery_img .slick-slide {margin: 0px;}
+.gallery .gallery_btn button {float: left; margin: 1px 2px; display: block; width: 23px; height: 23px;border:none; background: url('../img/icon.png') no-repeat;}
+.gallery .gallery_btn .gb_icon1 {background-position: -150px -120px}
+.gallery .gallery_btn .gb_icon2 {background-position: -150px -143px}
+.gallery .gallery_btn .gb_icon3 {background-position: -150px -166px}
+.gallery .gallery_btn .gb_icon4 {background-position: -150px -189px}
+.gallery .gallery_btn .gb_icon1:hover {background-position: -173px -120px}
+.gallery .gallery_btn .gb_icon2:hover {background-position: -173px -143px}
+.gallery .gallery_btn .gb_icon3:hover {background-position: -173px -166px}
+.gallery .gallery_btn .gb_icon4:hover {background-position: -173px -189px}
 
 /* 로그인 */
  
@@ -305,8 +304,6 @@
 .login_header .lh_check .input-check { vertical-align: -2px;}
 .login_header .lh_ip{ float:left;}
 .login_header .lh_ip em{ color: #0093bd; text-decoration:underline;}
-
-
 .login_content{ position:relative;}
 .login_content .lc_btn { position:absolute;right: 0; top:0 ;width: 62px; height: 47px; background:#fff;
   border: 1px solid #bebebe;
@@ -346,7 +343,9 @@
 
 
 /* 레이아웃 팝업 */
-#layer {display:none; position: fixed; left: 50px; top: 50px; width: 700px; z-index: 2000; border: 10px solid #dceff7; box-shadow: 3px 3px 10px rgba(0,0,0,0.4);}
-#layer img {width: 100%; display: block;}
-#layer .close {position: absolute; right: 20px; top: 20px; background: #0093bd; padding: 1px 6px; color: #fff;}
-#layer .close:hover {text-decoration: underline;}
+#layer { display:none;position:fixed;left:50px;top:50px; width:700px; border:10px solid #dceff7;box-shadow: 3px 3px 10px rgba(0,0,0,0.4); }
+#layer img {width:100%; display:block;}
+#layer .close { position:absolute; right:20px; top:20px;background:#0093bd; padding: 1px 6px; color:#fff;
+}
+
+#layer .close:hover { text-decoration:underline;}
